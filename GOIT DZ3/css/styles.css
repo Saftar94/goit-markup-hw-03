@@ -8,6 +8,7 @@
     --sect-colordbl:#2F303A;
     --port-hedrgr:#F5F4FA;
     --back--color:#2F303A;
+    --bord-head:#ECECEC;
     --marg-cart:30px;
     --text-logo:Raleway;   
     --text-body:Roboto;
@@ -53,6 +54,14 @@ img{
     margin-right: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    }
+
 
 /* ============================================== */
 
@@ -74,26 +83,28 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* height: 80px; */
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+    border-bottom: 1px solid var(--bord-head);
 }
 .nav-header{
     display: flex;
     /* ЧЕМ ЭТО ОТЛИЧАЕТСЯ ОТ height 80px и как правильно? */
-    padding-bottom: 25px;
-    padding-top: 25px;
+  
 }
 .headlink{
-    padding-left: 93px;
+    margin-left: 93px;
 }
 .headlink .links:not(:first-child){
-    padding-left: 50px;
+    margin-left: 50px;
 }
 .hero{
     display: flex;
     align-items: center;
 }
 .contact .links:not(:first-child){
-    padding-left: 50px;
+    margin-left: 50px;
 }
 /* Шрифт шапки лого */
 
@@ -153,11 +164,14 @@ img{
 
 .order{
     background-color: var(--back--color);
+   padding-top: 200px;
+   padding-bottom: 200px;
 }
 
 .order .container{
-    padding: 200px 252px 200px;
+    padding:0 252px;
     text-align: center;
+
 }
 
 
@@ -169,7 +183,9 @@ text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--text-colorwh);
-padding-bottom: 30px;
+margin-bottom: 30px;
+
+
 }
 
 /* конопка заказа */
@@ -183,6 +199,7 @@ color: var(--text-colorwh);
 background-color:var(--hover-colorblu);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
+border: 0;
 
 padding: 10px 32px;
 }
@@ -195,18 +212,20 @@ padding: 10px 32px;
 
 
 /* особености */
+.features{
+    padding: 94px 0;
+}
 .container .features-title{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-     padding-top:94px;
      margin-right: calc(-1 * var(--marg-cart));
 }
 
 
 .features-title .features-body{
     flex-basis: calc(100% / 4 - var(--marg-cart));
-    padding-right: var(--marg-cart);
+    margin-right: var(--marg-cart);
 }
 
 
@@ -215,12 +234,15 @@ padding: 10px 32px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--text-colorbl);
+    font-family: var(--text-body);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 
-    padding-bottom: 10px;
+
+    margin-bottom: 10px;
 }
 
 
-.features-body
 .features-body{
     line-height: 1.71;
     color: var(--text-colorgre);
@@ -229,11 +251,13 @@ padding: 10px 32px;
 
 /* Чем мы занимаемся */
 
+.wedoing-title{
+    padding-bottom: 94px;
+}
 .container .wedoing{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding-bottom: 94px;
 
     margin-left:calc(-1*var(--marg-cart));
 
@@ -244,17 +268,12 @@ padding: 10px 32px;
 
 }
 
-.container .doing{
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-
 
 /* Наша команда */
 
 .team-main{
     background-color: var(--port-hedrgr);
+    padding: 94px 0;
 
 }
 
@@ -262,7 +281,6 @@ padding: 10px 32px;
 .team-title{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 94px;
     list-style: none;
     margin-left: calc(-1*var(--marg-cart));
 
@@ -282,10 +300,13 @@ padding: 10px 32px;
     font-size: 36px;
     line-height: 1.16;
     color: var(--text-colorbl);
+    margin-bottom: 50px;
 
     text-align: center;
-    padding-top: 94px;
-    padding-bottom: 50px;
+}
+.card-pers{
+    text-align: center;
+    padding: 30px 0;
 }
 
 .team-body .person-name{
@@ -293,10 +314,7 @@ padding: 10px 32px;
     font-size: 16px;
     line-height: 1.18;
     color: var(--text-colorbl);
-
-    text-align: center;
-    padding-top: 30px;
-
+    margin-bottom: 10px;
     
 }
 
@@ -306,19 +324,15 @@ padding: 10px 32px;
     line-height: 1.18;
     color: var(--text-colorgre);
 
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 30px;
 }
 
 /* футер сайта */
 .footer-title{
     background-color:var(--text-colorbl);
-}
-
-.container .nav{
     padding: 60px 0 60px;
 }
+
+
 .container .footlogo{
     font-weight: 700;
     font-size: 26px;
@@ -328,14 +342,12 @@ padding: 10px 32px;
     color: var(--text-colorwh);
     text-decoration: none;
 
-    padding: 60px 0 60px;
+    display: block;
+    margin-bottom: 20px;
 }
 
-.address{
-    padding-top: 20px;
-}
-.address .links{
-    padding: 9px;
+.address .links:not(:last-child){
+    margin-bottom: 9px;
 }
 
 .address .address-title{  
@@ -355,13 +367,15 @@ padding: 10px 32px;
 /*  END COMPONENTS */
 
 /* PAGE PORTFOLIO MAIN */
-
+.section-portfolio{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 .container .filters{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     
 }
@@ -370,14 +384,16 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
 color: var(--text-colorbl);
+
 border-radius: 4px;
 cursor: pointer;
 background-color: var(--port-hedrgr);
 padding: 6px 22px;
+border: 0;
 }
 
-.filters .radio:not(:first-child){
-    margin-left: 8px;
+.filters .radio:not(:last-child){
+    margin-right: 8px;
 }
 
 .radio .button:hover,
@@ -408,18 +424,18 @@ padding: 6px 22px;
     letter-spacing: 0.06em;
     color: var(--text-colorbl);
 
-    padding-left: 24px;
-    padding-top: 20px;
-    padding-bottom: 4px;
-}
+    margin-bottom: 4px;
 
+}
 .portfotitle .portfooter{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
     color: var(--text-colorgre);
 
-    padding-left: 24px;
-    padding-bottom: 20px;
+}
+
+.portfotitle .card-des {
+padding: 20px 24px;
 
 }
