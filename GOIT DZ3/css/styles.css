@@ -79,18 +79,20 @@ img{
 
 
 /* Шапка сайта flex box*/
-.header-title .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-title{
     padding-bottom: 25px;
     padding-top: 25px;
 
     border-bottom: 1px solid var(--bord-head);
 }
+.header-title .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .nav-header{
     display: flex;
-    /* ЧЕМ ЭТО ОТЛИЧАЕТСЯ ОТ height 80px и как правильно? */
+    align-items: center;
   
 }
 .headlink{
@@ -169,7 +171,7 @@ img{
 }
 
 .order .container{
-    padding:0 252px;
+    width: 696px;
     text-align: center;
 
 }
